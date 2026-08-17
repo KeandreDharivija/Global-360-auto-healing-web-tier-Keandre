@@ -3,4 +3,4 @@ project_name            = "auto-healing-web"
 environment             = "demo"
 vpc_cidr                = "10.0.0.0/16"
 availability_zone_count = 2
-instance_type           = "t4g.nano"
+instance_type           = "t4g.micro"

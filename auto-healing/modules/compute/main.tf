@@ -77,13 +77,8 @@ resource "aws_launch_template" "web" {
     aws_security_group.web.id
   ]
 
-  user_data = base64encode(<<-EOF
-    #!/bin/bash
-    set -e
-
-    dnf install -y nginx
-    systemctl enable --now nginx
-  EOF
+  user_data = base64encode(
+    file("${path.module}/../../scripts/user-data.sh")
   )
 
   metadata_options {

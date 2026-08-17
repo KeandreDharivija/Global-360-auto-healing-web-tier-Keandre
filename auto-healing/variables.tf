@@ -41,5 +41,5 @@ variable "availability_zone_count" {
 variable "instance_type" {
   description = "EC2 instance type used by the web tier"
   type        = string
-  default     = "t4g.nano"
+  default     = "t4g.micro"
 }
